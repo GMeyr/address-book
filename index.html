@@ -15,19 +15,21 @@
       <h1>User Directory</h1>
     </header>
     <section ng-controller="mainCtrl">
-      <table>
-        <tbody>
-          <tr ng-repeat="user in users">
-            <td ng-switch on="user.phone">
-              <div ng-switch-when=""><i class="fa fa-phone"></i></div>
-              <div ng-switch-default>&nbsp;</div>
-            </td>
-            <td>{{ user.name }}</td>
-            <td>{{ user.email }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>{{data}}</p>
+          <div ng-repeat="user in users" ng-click="toggleDetail(user.id)">
+            <div>
+              <span>{{ user.name }}</span>
+              <span ng-switch on="user.phone">
+                <span ng-switch-when=""><i class="fa fa-phone"></i></span>
+                <span ng-switch-default>&nbsp;</span>
+              </span>
+            </div>
+            <div>
+              <span>{{ user.email }}</span>
+              <div ng-show="showDetail(user.id)">
+                {{user.company}}
+              </div>
+            </div>
+          </div>
       <address>
       </address>
     </section>

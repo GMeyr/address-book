@@ -1,7 +1,15 @@
 angular.module('AddressBook', [])
 
   .controller('mainCtrl', ['$scope', 'mainFactory', function ($scope, mainFactory){
+    var expanded = {};
+
     $scope.users = mainFactory.data;
+    $scope.showDetail = function (id){
+      return expanded[id];
+    };
+    $scope.toggleDetail = function(id){
+      expanded[id] = !expanded[id];
+    };
   }])
 
   .factory('mainFactory', [function (){
