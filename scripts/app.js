@@ -1,6 +1,11 @@
-angular.module('AddressBook')
+// angular.module('HelloWorldApp', [])
+//    .controller('HelloWorldController', function($scope) {
+//        $scope.greeting = "Hello World";
+// });
 
-.controller('mainCtrl', ['mainFactory', function (mainFactory){
+angular.module('AddressBook', [])
+
+.controller('mainCtrl', ['$scope', 'mainFactory', function ($scope, mainFactory){
   $scope.data = mainFactory.data;
 }])
 
