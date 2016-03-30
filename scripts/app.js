@@ -10,6 +10,14 @@ angular.module('AddressBook', [])
     $scope.toggleDetail = function(id){
       expanded[id] = !expanded[id];
     };
+    $scope.getURL = function(str){
+      if( str.slice(0,7) === 'http://' || str.slice(0,4) === 'www.' ){
+        var url = 'http://' + str;
+        console.log(url);
+        return url;
+      }
+      return str;
+    }
   }])
 
   .factory('mainFactory', [function (){
