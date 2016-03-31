@@ -4,6 +4,7 @@ angular.module('AddressBook', [])
     var expanded = {};
 
     $scope.users = mainFactory.data;
+
     $scope.showDetail = function (id){
       return expanded[id];
     };
@@ -18,6 +19,7 @@ angular.module('AddressBook', [])
       }
       return str;
     }
+
   }])
 
   .factory('mainFactory', [function (){

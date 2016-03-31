@@ -1,8 +1,34 @@
+.container {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 20%;
+}
+
+header {
+  border: 1px solid black;
+}
+
 h1 {
   color: red;
 }
 
+.list-item-header {
+  border: 3px solid black;
+}
+
+.list-item {
+  border: 1px solid black;
+}
+
+
+
 @media only screen and (max-device-width: 768px) {
+
+  .container {
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+
   header {
     position: fixed;
     top: -1%;
@@ -18,7 +44,7 @@ h1 {
     font-size: 4em;
   }
 
-  .main1 {
+  .directory {
     position: relative;
     border: 1px solid black !important;
 
