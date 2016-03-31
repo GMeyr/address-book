@@ -14,30 +14,28 @@
       <!-- TODO: Fix header and scroll with page in tablet or phone viewport -->
       <h1>User Directory</h1>
     </header>
-    <section ng-controller="mainCtrl">
-          <div ng-repeat="user in users" ng-click="toggleDetail(user.id)">
-            <div>
-              <span>{{ user.name }}</span>
-              <span ng-switch on="user.phone">
-                <!--TODO: Display phone number on icon hover -->
-                <span ng-switch-when=""><i class="fa fa-phone"></i></span>
-                <span ng-switch-default>&nbsp;</span>
-              </span>
-            </div>
-            <div>
-              <span>{{ user.email }}</span>
-              <div ng-show="showDetail(user.id)">
-                <div>{{ user.username }}</div>
-                <div>{{ user.address.street }}</div>
-                <div>{{ user.address.suite }}</div>
-                <div>{{ user.address.city }} {{ user.address.zipcode }}</div>
-                <div>{{ user.phone }}</div>
-                <div><a ng-href="http://{{user.website}}">{{ user.website }}</a></div>
-              </div>
+      <div class="main1" ng-controller="mainCtrl">
+        <div ng-repeat="user in users" ng-click="toggleDetail(user.id)">
+          <div>
+            <span>{{ user.name }}</span>
+            <span ng-switch on="user.phone">
+              <!--TODO: Display phone number on icon hover -->
+              <span ng-switch-when=""><i class="fa fa-phone"></i></span>
+              <span ng-switch-default>&nbsp;</span>
+            </span>
+          </div>
+          <div>
+            <span>{{ user.email }}</span>
+            <div ng-show="showDetail(user.id)">
+              <div>{{ user.username }}</div>
+              <div>{{ user.address.street }}</div>
+              <div>{{ user.address.suite }}</div>
+              <div>{{ user.address.city }} {{ user.address.zipcode }}</div>
+              <div>{{ user.phone }}</div>
+              <div><a ng-href="http://{{user.website}}">{{ user.website }}</a></div>
             </div>
           </div>
-      <address>
-      </address>
-    </section>
+        </div>
+      </div>
   </body>
 </html>
