@@ -3,7 +3,15 @@ angular.module('AddressBook', [])
   .controller('mainCtrl', ['$scope', 'mainFactory', function ($scope, mainFactory){
     var expanded = {};
 
-    $scope.users = mainFactory.data;
+    $scope.users = mainFactory.data.sort(function(a,b){
+      if(a.name[0] < b.name[0]) {
+        return -1
+      }
+      if (a.name[0] > b.name[0]) {
+        return 1;
+      }
+      return 0;
+    });
 
     $scope.showDetail = function (id){
       return expanded[id];
