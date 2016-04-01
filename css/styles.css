@@ -36,6 +36,10 @@ h1 {
   float: left;
 }
 
+.right {
+  float: right;
+}
+
 .details {
   padding: 10px 25px;
 }
@@ -72,19 +76,27 @@ h1 {
 
   .directory {
     border: 1px solid black !important;
-    margin-top: 5%;
+    margin-top: 20%;
     margin-left: 5%;
     width: 100%;
+    font-size: 1.5em !important;
   }
 
-  .list-item-header {
-    font-size: 2em !important;
-  }
-  /*TODO: Float email*/
-  .email {
-    font-size: 1em !important;
-  }
   .name {
     padding: 0px 5px;
   }
+}
+
+
+@media only screen and (max-device-width: 450px) {
+
+  .directory {
+    border: 1px solid black !important;
+    margin-top: 20%;
+    margin-left: 5%;
+    width: 100%;
+    font-size: 2em !important;
+  }
+
+
 }
