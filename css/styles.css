@@ -32,9 +32,8 @@ h1 {
   border: 1px solid black;
   border-radius: 6px;
 }
-
-.email {
-  float: right;
+.left {
+  float: left;
 }
 
 .details {
