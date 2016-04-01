@@ -5,7 +5,7 @@ angular.module('AddressBook', [])
 
     $scope.users = mainFactory.data.sort(function(a,b){
       if(a.name[0] < b.name[0]) {
-        return -1
+        return -1;
       }
       if (a.name[0] > b.name[0]) {
         return 1;
@@ -16,9 +16,11 @@ angular.module('AddressBook', [])
     $scope.showDetail = function (id){
       return expanded[id];
     };
+
     $scope.toggleDetail = function(id){
       expanded[id] = !expanded[id];
     };
+
     $scope.getURL = function(str){
       if( str.slice(0,7) === 'http://' || str.slice(0,4) === 'www.' ){
         var url = 'http://' + str;
@@ -26,7 +28,7 @@ angular.module('AddressBook', [])
         return url;
       }
       return str;
-    }
+    };
 
   }])
 
@@ -237,9 +239,9 @@ angular.module('AddressBook', [])
               "name": "Yost and Sons",
               "catchPhrase": "Switchable contextually­based project",
               "bs": "aggregate real­time technologies"
-              }
-              }
-              ]
+            }
+          }
+        ]
     }
 
 }]);

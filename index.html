@@ -11,15 +11,19 @@
   </head>
   <body ng-app="AddressBook">
     <div class="container">
+
       <header>
+
         <h1>User Directory</h1>
-        <input id="phoneCheckbox" type="checkbox" ng-click="toggleUsersDisplayed()">Only list users with phone numbers
+        
       </header>
+
       <div class="directory" ng-controller="mainCtrl">
+
         <div ng-repeat="user in users" ng-click="toggleDetail(user.id)">
           <div class="list-item">
-            <div class="list-item-header">
 
+            <div class="list-item-header">
               <span class="name left">{{ user.name }}</span>
               <span ng-switch on="user.phone">
                 <span ng-switch-when="">&nbsp;</span>
@@ -27,8 +31,8 @@
               </span>
               <span class="email right">{{ user.email }}</span>
             </div>
+
             <div>
-              
               <div ng-show="showDetail(user.id)" class="details">
                 <div>{{ user.username }}</div>
                 <div>{{ user.address.street }}</div>
@@ -38,8 +42,10 @@
                 <div><a ng-href="http://{{user.website}}">{{ user.website }}</a></div>
               </div>
             </div>
+
           </div>
         </div>
+
       </div>
     </div>
   </body>
