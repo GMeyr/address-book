@@ -59,29 +59,27 @@ h1 {
     margin-left: -2%;
     min-width: 95%;
     padding: 0%;
-    background-color: white;
   }
 
-
   header {
-    position: fixed;
-    top: -1%;
-    height: 10%;
-    left: -1%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
     z-index: 2;
     background-color: white;
     width: 100%;
   }
   
   h1 {
-    padding-left: 10%;
-    padding-top: 5%;
+    position: absolute;
+    left: 20px;
+    top:  -15px;
     font-size: 4em;
   }
 
   .directory {
     border: 1px solid black !important;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 5%;
     width: 100%;
     font-size: 1.5em !important;
@@ -97,7 +95,7 @@ h1 {
 
   .directory {
     border: 1px solid black !important;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 5%;
     width: 100%;
     font-size: 2em !important;
