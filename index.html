@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>User Directory</title>
+
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <title>User Directory</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
     <script type="text/javascript" src="./scripts/app.js"></script>
 
   </head>
+
   <body ng-app="AddressBook">
 
     <header>
@@ -24,21 +27,25 @@
 
             <div class="list-item-header">
               <span class="name left">{{ user.name }}</span>
+
               <span ng-switch on="user.phone">
                 <span ng-switch-when="">&nbsp;</span>
                 <span ng-switch-default><i class="fa fa-phone left icon"></i>&nbsp;</span>
               </span>
+
               <span class="email right">{{ user.email }}</span>
             </div>
 
             <div>
               <div ng-show="showDetail(user.id)" class="details">
+
                 <div>{{ user.username }}</div>
                 <div>{{ user.address.street }}</div>
                 <div>{{ user.address.suite }}</div>
                 <div>{{ user.address.city }} {{ user.address.zipcode }}</div>
                 <div>{{ user.phone }}</div>
                 <div><a ng-href="http://{{user.website}}">{{ user.website }}</a></div>
+
               </div>
             </div>
 

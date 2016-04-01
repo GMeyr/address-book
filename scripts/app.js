@@ -1,6 +1,7 @@
 angular.module('AddressBook', [])
 
   .controller('mainCtrl', ['$scope', 'mainFactory', function ($scope, mainFactory){
+
     var expanded = {};
 
     $scope.users = mainFactory.data.sort(function(a,b){
@@ -242,6 +243,6 @@ angular.module('AddressBook', [])
             }
           }
         ]
-    }
+    };
 
 }]);
