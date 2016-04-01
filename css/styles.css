@@ -45,9 +45,10 @@ h1 {
 
   .container {
     margin: 0%;
-    margin-left: 0%;
-    min-width: 90%;
+    margin-left: -2%;
+    min-width: 95%;
     padding: 0%;
+    background-color: white;
   }
 
   .body {
@@ -65,7 +66,8 @@ h1 {
   }
   
   h1 {
-
+    padding-left: 10%;
+    padding-top: 5%;
     font-size: 4em;
   }
 
@@ -82,5 +84,8 @@ h1 {
   /*TODO: Float email*/
   .email {
     font-size: 1em !important;
+  }
+  .name {
+    padding: 0px 5px;
   }
 }
